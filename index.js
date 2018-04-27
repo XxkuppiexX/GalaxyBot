@@ -62,10 +62,10 @@ bot.on('message', (message) => {
 });
 
 
-galaxybot.login('NDM4NDAwOTc5NTQxNTU3MjQ4.DcEERA.hfA5ecukQKCWAjqd9TLINy1cVhA');
-bot.login('NDM4NDAwOTc5NTQxNTU3MjQ4.DcEERA.hfA5ecukQKCWAjqd9TLINy1cVhA')
-helper.loginToken("NDM4NDAwOTc5NTQxNTU3MjQ4.DcEERA.hfA5ecukQKCWAjqd9TLINy1cVhA");
-client.login("NDM4NDAwOTc5NTQxNTU3MjQ4.DcEERA.hfA5ecukQKCWAjqd9TLINy1cVhA")
+galaxybot.login('process.env.BOT_TOKEN');
+bot.login('process.env.BOT_TOKEN')
+helper.loginToken("process.env.BOT_TOKEN");
+client.login("process.env.BOT_TOKEN")
 
 galaxybot.registry.registerGroup('other', 'Other')
 galaxybot.registry.registerCommandsIn(__dirname + "/commands")
