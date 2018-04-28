@@ -1,6 +1,5 @@
 const discord = require('discord.js')
 const bot = new discord.Client();
-var galaxybot = new commando.Client();
 const client = new discord.Client()
 var helper =  require('discordbot-helper');
 var opusscript = require("opusscript");
