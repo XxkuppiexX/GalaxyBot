@@ -56,14 +56,11 @@ bot.on('message', (message) => {
 });
 
 
-galaxybot.login('process.env.BOT_TOKEN');
+
 bot.login('process.env.BOT_TOKEN')
 helper.loginToken("process.env.BOT_TOKEN");
 client.login("process.env.BOT_TOKEN")
 
-galaxybot.registry.registerGroup('other', 'Other')
-galaxybot.registry.registerCommandsIn(__dirname + "/commands")
-galaxybot.registry.registerDefaults();
 
 helper.Owner("373079358614798346");
 // Remove ID and put your id (To get type \@Your username. DON'T copy the < , > and @ just take the numbers ex: 35465634) 
