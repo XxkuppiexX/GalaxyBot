@@ -8,10 +8,6 @@ bot.on('guildMemberAdd', member => {
     member.guild.channels.get('428835187456213013').send('Welkom in de discord van GalaxyBot**,' + member.user.username + '**'); 
 });
 
-    if (commando === "kick") {
-        let member = message.mentions.members.first();
-        member.kick();
-      }
 
 bot.on('message', (message) => {
 
