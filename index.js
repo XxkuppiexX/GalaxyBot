@@ -57,9 +57,9 @@ bot.on('message', (message) => {
 
 
 
-bot.login('process.env.BOT_TOKEN')
-helper.loginToken("process.env.BOT_TOKEN");
-client.login("process.env.BOT_TOKEN")
+bot.login('NDM5Nzk3NzEzODc0MzIxNDEw.DcYgSQ.Hx6hJhxQRf_x4zmIsvoA_QDIvQI')
+helper.loginToken("NDM5Nzk3NzEzODc0MzIxNDEw.DcYgSQ.Hx6hJhxQRf_x4zmIsvoA_QDIvQI");
+client.login("NDM5Nzk3NzEzODc0MzIxNDEw.DcYgSQ.Hx6hJhxQRf_x4zmIsvoA_QDIvQI")
 
 
 helper.Owner("373079358614798346");
