@@ -10,4 +10,4 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.1.0",
-  }
+  },
