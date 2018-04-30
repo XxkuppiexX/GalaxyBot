@@ -56,5 +56,39 @@ bot.on('message', (message) => {
 });
 
 
+<<<<<<< HEAD
 bot.login('process.env.BOT_TOKEN')
 client.login("process.env.BOT_TOKEN")
+=======
+
+bot.login('NDM5Nzk3NzEzODc0MzIxNDEw.DcYgSQ.Hx6hJhxQRf_x4zmIsvoA_QDIvQI')
+helper.loginToken("NDM5Nzk3NzEzODc0MzIxNDEw.DcYgSQ.Hx6hJhxQRf_x4zmIsvoA_QDIvQI");
+client.login("NDM5Nzk3NzEzODc0MzIxNDEw.DcYgSQ.Hx6hJhxQRf_x4zmIsvoA_QDIvQI")
+
+
+helper.Owner("373079358614798346");
+// Remove ID and put your id (To get type \@Your username. DON'T copy the < , > and @ just take the numbers ex: 35465634) 
+ 
+helper.on("logged", function () {
+// You need this for the bot to work, 
+ 
+    helper.addCommand("!owner", helper.getOwner());
+// This outputs the owner's username. sometimes its not working. 
+
+// create an event listener for messages
+bot.on('message', message => {
+    // if the message is "what is my avatar",
+    if (message.content === 'wat is mijn avatar?') {
+      // send the user's avatar URL
+      message.reply(message.author.avatarURL);
+    }
+  });
+    
+ 
+    helper.addCommandStartWith("-say1", "{content}");
+    helper.addCommandStartWith("-say2", "`{content}`");
+    helper.addCommandStartWith("-warn", "dit is een waarschuwing wegens {content}")
+ 
+helper.addCommand("commands", helper.commands());
+});
+>>>>>>> d6733971132de4123aac7eb3852679623aff498e
