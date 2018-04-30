@@ -1,8 +1,6 @@
 const discord = require('discord.js')
 const bot = new discord.Client();
 const client = new discord.Client()
-var helper =  require('discordbot-helper');
-var opusscript = require("opusscript");
 
 bot.on('guildMemberAdd', member => {
     member.guild.channels.get('428835187456213013').send('Welkom in de discord van GalaxyBot**,' + member.user.username + '**'); 
