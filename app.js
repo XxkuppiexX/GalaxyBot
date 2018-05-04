@@ -12,7 +12,7 @@ const config = require("./config.json");
 // config.prefix contains the message prefix.
 
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('428835187456213013').send(' Welkom in de ruimte,'+ member.user.username +'!'); 
+    member.guild.channels.get('428835187456213013').send(' Welkom in de ruimte,' + member.user.username + '!'); 
 });
 
 client.on("ready", () => {
@@ -32,8 +32,7 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
 
-client.on("guildMemberAdd", member => {
-    // this event triggers when the bot is removed from a guild.
+client.on("guildMemberAdd", member => {s
     console.log(`er is iemand gejoint:` + member.user.username);
   });
 
