@@ -11,6 +11,10 @@ const config = require("./config.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('428835187456213013').send(' Welkom in de ruimte,'+ member.user.username +'!'); 
+});
+
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot is tomas ariëns aan het hacken, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
