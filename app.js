@@ -32,7 +32,7 @@ if (message.content.toLowerCase().startsWith(prefix + `nieuw`)) {
     const reason = message.content.split(" ").slice(1).join(" ");
     if (message.guild.channels.exists("name", "ticket-" + message.author.id)) return message.channel.send(`Jij hebt op dit moment al een ticket open.`);
     message.guild.createChannel(`ticket-${message.author.id}`, "text").then(c => {
-        let role = message.guild.roles.find("name", "?? Support??");
+        let role = message.guild.roles.find("name", "⚙️ Support ⚙️");
         let role2 = message.guild.roles.find("name", "@everyone");
         c.overwritePermissions(role, {
             SEND_MESSAGES: true,
