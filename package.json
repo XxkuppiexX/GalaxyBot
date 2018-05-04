@@ -1,13 +1,13 @@
 {
-  "name": "galaxybot",
+  "name": "GalaxyBot --beta",
+  "description": "GalaxyBot --beta",
   "version": "1.0.0",
-  "description": "A discord Bot",
   "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
-  "author": "Lars",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "11.1.0",
-  },
+    "request": "2.81.0"
+  }
+}
