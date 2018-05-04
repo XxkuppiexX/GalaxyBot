@@ -5,6 +5,7 @@ const Discord = require("discord.js");
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
 const client = new Discord.Client();
+const bot = new Discord.Client();
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./config.json");
@@ -73,6 +74,52 @@ if (message.content.toLowerCase().startsWith(prefix + `sluit`)) {
         });
     });
 }
+
+});
+
+bot.on('message', (message) => {
+
+    if(message.content == 'hoi') {
+       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
+        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
+    }
+
+});
+
+bot.on('message', (message) => {
+
+    if(message.content == 'hey') {
+       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
+        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
+    }
+
+});
+
+bot.on('message', (message) => {
+
+    if(message.content == 'hai') {
+       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
+        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
+    }
+
+});
+
+bot.on('message', (message) => {
+
+    if(message.content == 'hallo') {
+       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
+        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
+    }
+
+});
+
+
+bot.on('message', (message) => {
+
+    if(message.content == 'goed') {
+       //message.reply('Mooi, met mij ook!');
+        message.channel.sendMessage('Mooi, met mij ook!')
+    }
 
 });
 
