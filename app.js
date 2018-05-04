@@ -12,7 +12,7 @@ const config = require("./config.json");
 // config.prefix contains the message prefix.
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member.user + '!🌎'); 
+    member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member + '!🌎'); 
 });
 
 client.on("ready", () => {
