@@ -54,7 +54,7 @@ if (message.content.toLowerCase().startsWith(prefix + `nieuw`)) {
         c.send({ embed: embed });
     }).catch(console.error);
 }
-if (message.content.toLowerCase().startsWith(prefix + `close`)) {
+if (message.content.toLowerCase().startsWith(prefix + `sluit`)) {
     if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`je kan het ticket niet sluiten als je niet in de channel van de ticket zit.`);
 
     message.channel.send(`Weet je het zeker? Deze actie kan niet ongedaan worden gemaakt\nAls je het zeker weet typ \`!ikweethetzeker\`. Na 10 seconde word dit geanuleerd en zal dit ticket niet verwijderd worden.`)
