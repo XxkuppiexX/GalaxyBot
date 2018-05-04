@@ -41,12 +41,6 @@ client.on("guildMemberAdd", member => {
     console.log(`er is iemand gejoint:` + member.user.username);
   });
   
- client.on("message", function(message){ 
-      if (command == "dobbel") {
-  		var result = Math.floor((Math.random() * 100) + 1);
-		message.channel.send(message, "je hebt " + result + " gerold! :thumbsup:");
-    }
-
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   
