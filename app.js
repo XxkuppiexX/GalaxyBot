@@ -24,7 +24,6 @@ function clean(text) {
 
 var prefix = "!";
 
-
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -254,3 +253,4 @@ client.on("message", async message => {
 });
 
 client.login(process.env.BOT_TOKEN);
+});
