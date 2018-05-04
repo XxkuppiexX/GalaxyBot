@@ -11,6 +11,11 @@ const config = require("./config.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
+client.on("ready", () => {
+  client.user.setActivity(`met vince XD`);
+});
+
+
 client.on('guildMemberAdd', member => {
     member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member + '!🌎'); 
 });
