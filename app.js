@@ -32,7 +32,7 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
 
-client.on("guildMemberAdd", member => {s
+client.on("guildMemberAdd", member => {
     console.log(`er is iemand gejoint:` + member.user.username);
   });
 
