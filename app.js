@@ -12,7 +12,7 @@ const config = require("./config.json");
 // config.prefix contains the message prefix.
 
 client.on("ready", () => {
-  client.user.setActivity(`met vince`);
+  client.user.setActivity(`met vince en lars`);
 });
 
 
