@@ -74,6 +74,8 @@ if (message.content.toLowerCase().startsWith(prefix + `sluit`)) {
     });
 }
 
+});
+
 client.on('guildMemberAdd', member => {
     member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member + '!🌎'); 
 });
@@ -253,4 +255,3 @@ client.on("message", async message => {
 });
 
 client.login(process.env.BOT_TOKEN);
-});
