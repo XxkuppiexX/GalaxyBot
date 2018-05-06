@@ -301,4 +301,10 @@ client.on("message", async message => {
   }
 });
 
+  if(command === "evertiscool") {
+    // This command must be limited to mods and admins. In this example we just hardcode the role names.
+    // Please read on Array.some() to understand this bit: 
+    // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
+      return message.reply("wat moet ik hiervan zeggen..");
+
 client.login(process.env.BOT_TOKEN);
