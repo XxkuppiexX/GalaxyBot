@@ -178,7 +178,8 @@ client.on("message", async message => {
   
 if(command === "eenhoorn") {
 message.channel.send("https://pre00.deviantart.net/aa37/th/pre/f/2018/063/c/c/movie_style_lightning_bliss_profile_by_lightning_bliss-dc4y26x.png")
-
+}
+});
 
   if(command === "tafeltennis") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
