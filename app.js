@@ -85,11 +85,7 @@ function clean(text) {
         return text;
 }
 
-var prefix = "!";
-
 client.on("message", (message) => {
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
-
 if (message.content.toLowerCase().startsWith(`nieuw`)) {
     const reason = message.content.split(" ").slice(1).join(" ");
     if (message.guild.channels.exists("name", "command-" + message.author.username)) return message.channel.send(`Jij hebt op dit moment al een ticket open.`);
