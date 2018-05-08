@@ -136,6 +136,8 @@ if (message.content.toLowerCase().startsWith(prefix + `sluit`)) {
         });
     });
 }
+	
+});
 
 bot.on('message', (message) => {
 
