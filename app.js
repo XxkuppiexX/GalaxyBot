@@ -181,6 +181,10 @@ if(command === "eenhoorn") {
 message.channel.send("https://pre00.deviantart.net/aa37/th/pre/f/2018/063/c/c/movie_style_lightning_bliss_profile_by_lightning_bliss-dc4y26x.png")
 }
 
+if(command === "kaas") {
+message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
+}
+	
   if(command === "tafeltennis") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
