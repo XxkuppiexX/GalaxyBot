@@ -105,7 +105,7 @@ client.on('message', (message) => {
 
 });
 
-bot.on('message', (message) => {
+client.on('message', (message) => {
 
     if(message.content == 'hallo') {
        //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
@@ -116,7 +116,7 @@ bot.on('message', (message) => {
 
 client.on('message', (message) => {
 
-    if(message.content == 'goed') {
+    if(message.content.startsWith == 'goed') {
        //message.reply('Mooi, met mij ook!');
         message.channel.sendMessage('Mooi, met mij ook!')
     }
