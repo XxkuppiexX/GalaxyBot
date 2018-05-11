@@ -45,7 +45,7 @@ if (message.content.toLowerCase().startsWith(prefix + `nieuw`)) {
             SEND_MESSAGES: true,
             READ_MESSAGES: true
         });
-        message.channel.send(`:white_check_mark: Your ticket has been created, #${c.name}.`);
+        message.channel.send(`:white_check_mark: Je ticket is gemaakt, #${c.name}.`);
         const embed = new Discord.RichEmbed()
         .setColor(0xCF40FA)
         .addField(`Hey ${message.author.username}!`, `Je hebt een ticket geopend probeer zo goed mogelijk uit te leggen waarom je deze ticket hebt geopent. Onze Support zal je dan zo snel mogelijk helpen.`)
@@ -226,7 +226,16 @@ message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
     // And we get the bot to say the thing: 
     message.channel.send(sayMessage);
   }
-
+	
+if(command === "set activity")
+  if(!message.member.roles.some(r=>["☄️ Galaxy CEO ☄️"].includes(r.name)) )
+  return message.reply("Je hebt hier geen perms voor");
+  const sayMessage = args.join(" ");
+  message.delete().catch(O_o=>{});
+  client.user.setActivity(sayMessage);
+}
+	
+	
   if(command === "warn") {
     if(!message.member.roles.some(r=>["☄️ Galaxy CEO ☄️", "⚙️ Head-Support ⚙️", "bot perms"].includes(r.name)) )
     return message.reply("Sorry je hebt hier geen perms voor :(");
