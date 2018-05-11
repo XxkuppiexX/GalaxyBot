@@ -108,6 +108,7 @@ if (message.content.toLowerCase().startsWith(prefix + `lang eng`)) {
         });
         message.channel.send(`:white_check_mark: The english channels had geen created`);
         c.send(":earth_americas: `GalaxyBot` :earth_americas: \n \n `Prijzen` \n \n `*DC bot {small}*` €1,-\n `*DC bot {medium}*` €2,-\n `*DC bot {big}*` €3,- \n \n `PAY ATTENTION! coming soon minecraft servers!` \n \n :comet️: @here :comet️:")
+	        }).catch(console.error);
 	    }
 if (message.content.toLowerCase().startsWith(prefix + `sluit`)) {
     if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`je kan het ticket niet sluiten als je niet in de channel van de ticket zit.`);
