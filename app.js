@@ -275,7 +275,7 @@ message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if(!message.member.roles.some(r=>["⚙️ Head-Support ⚙️", "☄️ Galaxy CEO ☄️", "bot perms"].includes(r.name)) )
-      return message.reply("srs +ban dacht je nou echt.......");
+      return message.reply("srs !ban dacht je nou echt.......");
     
     let member = message.mentions.members.first();
     if(!member)
