@@ -227,7 +227,7 @@ message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
     message.channel.send(sayMessage);
   }
 	
-if(command === "set")
+if(command === "set") {
   if(!message.member.roles.some(r=>["☄️ Galaxy CEO ☄️"].includes(r.name)) )
   return message.reply("Je hebt hier geen perms voor");
   const sayMessage = args.join(" ");
