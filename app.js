@@ -98,7 +98,8 @@ if (message.content.toLowerCase().startsWith(prefix + `lang eng`)) {
             SEND_MESSAGES: false,
             READ_MESSAGES: true
         });
-        c.overwritePermissions(role2, {            SEND_MESSAGES: false,
+        c.overwritePermissions(role2, {           
+            SEND_MESSAGES: false,
             READ_MESSAGES: false
         });
         c.overwritePermissions(message.author, {
