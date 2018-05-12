@@ -173,7 +173,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
 
-    if(message.content.startsWith == 'goed') {
+    if(message.content.startsWith('goed')) {
        //message.reply('Mooi, met mij ook!');
         message.channel.sendMessage('Mooi, met mij ook!')
     }
