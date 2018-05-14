@@ -15,10 +15,6 @@ client.on("ready", () => {
   client.user.setActivity(`met vince en lars`);
 });
 
-client.on("ready", () => {
-  guild.channels.get('444917970687229972').send("realoaden gelukt :smile:")
-});
-
 function clean(text) {
     if (typeof(text) === "string")
       return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
