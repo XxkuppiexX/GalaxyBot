@@ -182,7 +182,7 @@ client.on('message', (message) => {
 
 client.on('guildMemberAdd', member => {
     member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member + '!🌎'); 
-    message.member.addRole('427226917738119179')
+    member.addRole('427226917738119179')
   .then(console.log)
   .catch(console.error);
 });
