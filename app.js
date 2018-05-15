@@ -299,11 +299,11 @@ if(command === "set") {
 }
   
 if(command === "members") {
-const membermsg = new Discord.RichEmbed()
+const embed = new Discord.RichEmbed()
 .setColor(0xCF40FA)
 .addField(``)
 .setTimestamp();
-message.channel.send({ embed: membermsg });
+message.channel.send({ embed: embed });
 }
 
 	
