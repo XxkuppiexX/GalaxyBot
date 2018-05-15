@@ -239,6 +239,10 @@ if(command === "eenhoorn") {
 message.channel.send("https://pre00.deviantart.net/aa37/th/pre/f/2018/063/c/c/movie_style_lightning_bliss_profile_by_lightning_bliss-dc4y26x.png")
 }
 
+if(command === "HamKaasBroodjeVanDeMacDonaldsEnHetIsLekker") {
+message.channel.send("https://www.google.nl/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2F736x%2F1b%2F15%2Fab%2F1b15ab1f35abb91204541036dd977798--kaas-toast-ham-and-cheese.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fwillyvandenberg%2Frecepten-broodjes-bladerdeeg%2F&docid=5d-MYuXMjQcAdM&tbnid=X-LB3xB7DCiDbM%3A&vet=10ahUKEwiFy4CYjYjbAhURZVAKHXc-Bz8QMwg4KAQwBA..i&w=736&h=552&itg=1&bih=637&biw=1366&q=HamKaasBroodjeVanDeMacDonalds&ved=0ahUKEwiFy4CYjYjbAhURZVAKHXc-Bz8QMwg4KAQwBA&iact=mrc&uact=8")
+}
+
 if(command === "kaas") {
 message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
 }
@@ -293,7 +297,15 @@ if(command === "set") {
   message.delete().catch(O_o=>{});
   client.user.setActivity(sayMessage);
 }
-	
+  
+if(command === "members") {
+const membermsg = new Discord.RichEmbed()
+.setColor(0xCF40FA)
+.addField(``)
+.setTimestamp();
+message.channel.send({ embed: membermsg });
+}
+
 	
   if(command === "warn") {
     if(!message.member.roles.some(r=>["☄️ Galaxy CEO ☄️", "⚙️ Head-Support ⚙️", "bot perms","MC Owner"].includes(r.name)) )
