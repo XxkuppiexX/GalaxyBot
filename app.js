@@ -263,14 +263,18 @@ if(command === "storing") {
 if(command === "profsay") {
 	if(!message.member.roles.some(r=>["☄️ Galaxy CEO"].includes(r.name)) )
   return message.reply("Sorry je hebt hier geen perms voor :(");
-  let msg = args.join(" ");
+  let msg = args.slice(1).join(" ");
+  let nieuwtje = args[0]
   message.channel.send({embed: {
-    color: 3447003,
-    title: "Bericht:",
-    description: "This is a test embed to showcase what they look like and what they can do.",
+    color: 0xeb5ef7,
+    title: nieuwtje,
     fields: [{
+        name: "Bericht:",
+        value: msg,
+      },
+      {
         name: "Geschreven door:",
-        value: "iemand",
+        value: message.author,
       }
     ],
     timestamp: new Date(),
