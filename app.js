@@ -245,7 +245,7 @@ message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
 }
   
 if(command === "storing") {
-	if(!message.member.roles.some(r=>["☄️ Galaxy CEO ☄️", "🔧 Developer"].includes(r.name)) )
+	if(!message.member.roles.some(r=>["☄️ Galaxy CEO", "🔧 Developer"].includes(r.name)) )
     return message.reply("Sorry je hebt hier geen perms voor :(");
 	let naam = args[0];
     let storing = args.slice(1).join(" ");
