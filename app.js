@@ -184,7 +184,7 @@ client.on('message', (message) => {
 
   if(message.content.startsWith('http')) {
     message.delete().catch(O_o=>{}); 
-    message.send('**LET OP!**\n`Ook in de ruimte gelden regels!\ndit is een waarschuwing wegens:\nlinkjes posten zonder toestemming!`')
+    message.channel.sendMessage('**LET OP!**\n`Ook in de ruimte gelden regels!\ndit is een waarschuwing wegens:\nlinkjes posten zonder toestemming!`')
   }
 
 });
