@@ -250,7 +250,7 @@ if(command === "storing") {
 	let naam = args[0];
     let storing = args.slice(1).join(" ");
 	message.channel.send({embed: {
-    color: 3447003,
+    color: 0xeb5ef7,
     title: "**Storing Dienst**",
     description:"**Storing Type:**\n" + naam + "\n \n**bescrijving:**\n" + storing,
     footer: {
