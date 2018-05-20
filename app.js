@@ -243,7 +243,23 @@ message.channel.send("https://www.google.nl/imgres?imgurl=https%3A%2F%2Fi.pinimg
 if(command === "kaas") {
 message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
 }
-	
+  
+if(command === "storing") {
+	if(!message.member.roles.some(r=>["☄️ Galaxy CEO ☄️", "🔧 Developer"].includes(r.name)) )
+    return message.reply("Sorry je hebt hier geen perms voor :(");
+	let naam = args[0];
+    let storing = args.slice(1).join(" ");
+	message.channel.send({embed: {
+    color: 3447003,
+    title: "**Storing Dienst**",
+    description:"**Storing Type:**\n" + naam + "\n \n**bescrijving:**\n" + storing,
+    footer: {
+      text: "© GalaxyWorlds"
+  }
+}
+});
+}
+
   if(command === "tafeltennis") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
