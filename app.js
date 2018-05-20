@@ -270,7 +270,7 @@ if(command === "profsay") {
     description: "This is a test embed to showcase what they look like and what they can do.",
     fields: [{
         name: "Geschreven door:",
-        value: "iemand"
+        value: "iemand",
       }
     ],
     timestamp: new Date(),
