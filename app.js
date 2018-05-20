@@ -260,6 +260,27 @@ if(command === "storing") {
 });
 }
 
+if(command === "profsay") {
+	if(!message.member.roles.some(r=>["☄️ Galaxy CEO"].includes(r.name)) )
+  return message.reply("Sorry je hebt hier geen perms voor :(");
+  let msg = args.join(" ");
+  message.channel.send({embed: {
+    color: 3447003,
+    title: "Bericht:",
+    description: "This is a test embed to showcase what they look like and what they can do.",
+    fields: [{
+        name: "Geschreven door:",
+        value: message.author
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      text: "© GalaxyWorlds |" + Date
+    }
+  }
+});
+}
+
   if(command === "tafeltennis") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
