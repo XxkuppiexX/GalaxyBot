@@ -275,7 +275,7 @@ if(command === "profsay") {
     ],
     timestamp: new Date(),
     footer: {
-      text: "© GalaxyWorlds |" + Date
+      text: "© GalaxyWorlds"
     }
   }
 });
