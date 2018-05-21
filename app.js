@@ -136,7 +136,7 @@ if (message.content.toLowerCase().startsWith(prefix + `sluit`)) {
 
 client.on('message', (message) => {
 
-    if(message.content == 'hoi') {
+    if(message.content.toLowerCase() == 'hoi') {
        //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
         message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
     }
@@ -145,7 +145,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
 
-    if(message.content == 'hey') {
+    if(message.content.toLowerCase() == 'hey') {
        //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
         message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
     }
@@ -154,7 +154,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
 
-    if(message.content == 'hai') {
+    if(message.content.toLowerCase() == 'hai') {
        //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
         message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
     }
@@ -163,7 +163,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
 
-    if(message.content == 'hallo') {
+    if(message.content.toLowerCase() == 'hallo') {
        //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
         message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
     }
@@ -173,7 +173,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
 
-    if(message.content.startsWith('goed')) {
+    if(message.content.toLowerCase().startsWith('goed')) {
        //message.reply('Mooi, met mij ook!');
         message.channel.sendMessage('Mooi, met mij ook!')
     }
