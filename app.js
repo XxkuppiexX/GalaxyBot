@@ -268,7 +268,7 @@ if(command === "profsay") {
   message.channel.send({embed: {
     color: 0xeb5ef7,
     title: nieuwtje + ":",
-    description: profmsg + "\n \n**Geschreven door:**\n" + message.author,
+    description: profmsg + "\n \nGeschreven door:**" + message.author,
     timestamp: new Date(),
     footer: {
       text: "© GalaxyWorlds"
@@ -421,4 +421,4 @@ message.channel.send({ embed: embed });
 });
 
 
-client.login(process.env.BOT_TOKEN);
+client.login("NDM4NDAwOTc5NTQxNTU3MjQ4.Dc3Azw.B62w5HXJdEi7fSRzyCcGN1fNkvA");
