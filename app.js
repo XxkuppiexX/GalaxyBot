@@ -274,7 +274,7 @@ if(command === "profsay") {
       },
       {
         name: "Geschreven door:",
-        value: message.author,
+        value: "ïemand",
       }
     ],
     timestamp: new Date(),
