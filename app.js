@@ -267,11 +267,11 @@ if(command === "profsay") {
   let nieuwtje = args[0]
   message.channel.send({embed: {
     color: 0xeb5ef7,
-    title: nieuwtje,
+    title: nieuwtje + ":",
     description: profmsg,
     fields: [{
         name: "Geschreven door:",
-        description: "iemand",
+        value: message.author,
       }
     ],
     timestamp: new Date(),
@@ -426,4 +426,4 @@ message.channel.send({ embed: embed });
 });
 
 
-client.login(process.env.BOT_TOKEN);
+client.login("NDM4NDAwOTc5NTQxNTU3MjQ4.Dc3Azw.B62w5HXJdEi7fSRzyCcGN1fNkvA");
