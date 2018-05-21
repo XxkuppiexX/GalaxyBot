@@ -252,7 +252,7 @@ if(command === "storing") {
 	message.channel.send({embed: {
     color: 0xeb5ef7,
     title: "**Storing Dienst**",
-    description:"**Storing Type:**\n" + naam + "\n \n**bescrijving:**\n" + storing,
+    description:"**Storing Type:**\n" + naam + "\n \n**Bescrijving:**\n" + storing,
     footer: {
       text: "© GalaxyWorlds"
   }
@@ -270,11 +270,11 @@ if(command === "profsay") {
     title: nieuwtje,
     fields: [{
         name: "Bericht:",
-        value: "${msg}",
+        value: (msg),
       },
       {
         name: "Geschreven door:",
-        value: message.autor,
+        value: (message.autor),
       }
     ],
     timestamp: new Date(),
