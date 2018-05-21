@@ -270,7 +270,7 @@ if(command === "profsay") {
     title: nieuwtje,
     fields: [{
         name: "Bericht:",
-        description: msg,
+        description: "msg",
       },
       {
         name: "Geschreven door:",
