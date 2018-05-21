@@ -270,11 +270,11 @@ if(command === "profsay") {
     title: nieuwtje,
     fields: [{
         name: "Bericht:",
-        value: "" + msg,
+        description: msg,
       },
       {
         name: "Geschreven door:",
-        value: "iemand",
+        description: "iemand",
       }
     ],
     timestamp: new Date(),
