@@ -268,7 +268,7 @@ if(command === "profsay") {
   message.channel.send({embed: {
     color: 0xeb5ef7,
     title: nieuwtje + ":",
-    description: profmsg + "\n \nGeschreven door:**" + message.author,
+    description: profmsg + "\n \n**Geschreven door:**\n" + message.author,
     timestamp: new Date(),
     footer: {
       text: "© GalaxyWorlds"
