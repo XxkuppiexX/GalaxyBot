@@ -133,7 +133,7 @@ client.on('message', (message) => {
 
 client.on('guildMemberAdd', member => {
     member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member + '!🌎'); 
-    member.addRole('427226917738119179')
+    member.addRole('448395948650004480')
   .then(console.log)
   .catch(console.error);
 });
@@ -323,6 +323,18 @@ message.channel.send({ embed: embed });
 
   }
   
+if(command === "lang nl")
+if(!message.member.roles.some(r=>["new"].includes(r.name)) )
+return message.reply(" ");
+message.author.addrole("427226917738119179")
+message.author.removeRole('448395948650004480')
+
+if(command === "lang eng")
+if(!message.member.roles.some(r=>["new"].includes(r.name)) )
+return message.reply(" ");
+message.author.removeRole('448395948650004480')
+messgae.author.addRole("440451986119196672")
+
   if(command === "ban") {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
