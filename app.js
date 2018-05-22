@@ -326,12 +326,14 @@ message.channel.send({ embed: embed });
 if(command === "lang nl")
 if(!message.member.roles.some(r=>["new"].includes(r.name)) )
 return message.reply(" ");
+message.delete().catch(O_o=>{});
 message.author.addrole("427226917738119179")
 message.author.removeRole('448395948650004480')
 
 if(command === "lang eng")
 if(!message.member.roles.some(r=>["new"].includes(r.name)) )
 return message.reply(" ");
+message.delete().catch(O_o=>{});
 message.author.removeRole('448395948650004480')
 messgae.author.addRole("440451986119196672")
 
