@@ -132,7 +132,7 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
-if(messgae.content === "!lang nl")
+if(message.content === "!lang nl")
 if(!message.member.roles.some(r=>["new"].includes(r.name)) )
 return message.reply(" ");
 message.delete().catch(O_o=>{});
