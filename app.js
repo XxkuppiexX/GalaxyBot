@@ -131,21 +131,29 @@ client.on('message', (message) => {
 
 });
 
-client.on('message', (message) => {
-if(message.content === "!lang nl")
-if(!message.member.roles.some(r=>["new"].includes(r.name)) )
-return message.reply(" ");
-message.delete().catch(O_o=>{});
-message.author.addrole("427226917738119179")
-message.author.removeRole('448395948650004480')
-});
 
 client.on('guildMemberAdd', member => {
     member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member + '!🌎'); 
     member.addRole('448395948650004480')
+    member.guild.createChannel(`config-${member}`, "text").then(c => {
+      let everyone = member.guild.roles.find("name", "@everyone");
+      c.overwritePermissions(everyone, {
+          SEND_MESSAGES: false,
+          READ_MESSAGES: false
+      });
+      c.overwritePermissions(member, {
+          SEND_MESSAGES: true,
+          READ_MESSAGES: true
+      });
+    if(message.member.startsWith("!lang nl"))
+      if (!message.channel.name.startsWith(`config-`)) return message.channel.send(` `);  
+        message.channel.delete();
+    member.removeRole("448395948650004480")
+    member.addRole('427226917738119179')
   .then(console.log)
   .catch(console.error);
-});
+    });
+  });
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
@@ -202,10 +210,10 @@ if(command === "storing") {
     let storing = args.slice(1).join(" ");
 	message.channel.send({embed: {
     color: 0xeb5ef7,
-    title: "**Storing Dienst**",
-    description:"**Storing Type:**\n" + naam + "\n \n**Bescrijving:**\n" + storing,
+    title: "**Breakdown service**",
+    description:"**Fault Type:**\n" + naam + "\n \n**Description:**\n" + storing,
     footer: {
-      text: "© GalaxyWorlds"
+      text: "© BetterVirus"
   }
 }
 });
@@ -219,10 +227,10 @@ if(command === "profsay") {
   message.channel.send({embed: {
     color: 0xeb5ef7,
     title: nieuwtje + ":",
-    description: profmsg + "\n \n**Geschreven door:**\n" + message.author,
+    description: profmsg + "\n \n**Written by:**\n" + message.author,
     timestamp: new Date(),
     footer: {
-      text: "© GalaxyWorlds"
+      text: "© BetterVirus"
     }
   }
 });
@@ -262,15 +270,11 @@ if(command === "profsay") {
   if(command === "say") {
     if(!message.member.roles.some(r=>["☄️ Galaxy CEO", "⚙️ Head-Support ⚙️", "bot perms","MC Owner", "MC Owner"].includes(r.name)) )
     return message.reply("Sorry je hebt hier geen perms voor :(");
-    // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
-    // To get the "message" itself we join the `args` back into a string with spaces: 
     const sayMessage = args.join(" ");
-    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
     message.delete().catch(O_o=>{}); 
-    // And we get the bot to say the thing: 
-    message.channel.send(sayMessage);
+    message.channel.send(sayMessage); 
   }
-	
+  
 if(command === "set") {
   if(!message.member.roles.some(r=>["☄️ Galaxy CEO"].includes(r.name)) )
   return message.reply("Je hebt hier geen perms voor");
@@ -332,19 +336,6 @@ message.channel.send({ embed: embed });
 
   }
   
-if(command === "lang nl")
-if(!message.member.roles.some(r=>["new"].includes(r.name)) )
-return message.reply(" ");
-message.delete().catch(O_o=>{});
-message.author.addrole("427226917738119179")
-message.author.removeRole('448395948650004480')
-
-if(command === "lang eng")
-if(!message.member.roles.some(r=>["new"].includes(r.name)) )
-return message.reply(" ");
-message.delete().catch(O_o=>{});
-message.author.removeRole('448395948650004480')
-messgae.author.addRole("440451986119196672")
 
   if(command === "ban") {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
