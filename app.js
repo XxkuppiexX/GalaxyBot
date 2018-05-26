@@ -301,9 +301,9 @@ message.channel.send({ embed: embed });
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
     message.delete().catch(O_o=>{}); 
     // And we get the bot to say the thing: 
-    message.channel.send("**LET OP!**");
-	message.channel.send("`Ook in de ruimte gelden regels!`");
-    message.channel.send("`dit is een waarschuwing wegens:`");
+    message.channel.send("**WARN!**");
+	message.channel.send("`Virus detected!`");
+    message.channel.send("`This is a warn because:`");
     message.channel.send(sayMessage)
   }
 
