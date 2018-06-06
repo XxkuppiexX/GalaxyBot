@@ -159,6 +159,13 @@ if(command === "profsay") {
 });
 }
 
+if(command === "cheesgo") {
+let role = message.guild.roles.find("name", ".");
+if (message.channel.id = 453984941558988804) {
+  member.addRole(role).catch(console.error);
+  message.channel.send(":white_check_mark: thanks for your verify,${message.author}");
+}
+}
   if(command === "tafeltennis") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
