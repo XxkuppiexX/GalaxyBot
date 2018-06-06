@@ -153,7 +153,7 @@ if(command === "profsay") {
     description: profmsg + "\n \n**Written by:**\n" + message.author,
     timestamp: new Date(),
     footer: {
-      text: "© BetterVirus"
+      text: "© CheeseWorlds"
     }
   }
 });
