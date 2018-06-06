@@ -282,7 +282,7 @@ message.channel.send({ embed: embed });
 
   if(command === "invite") {
     message.channel.send("📪 I have send you a DM with a explenation.📪 ")
-    message.author.send("You can invite me with to this link: https://discordapp.com/api/oauth2/authorize?client_id=453861286242025484&permissions=8&scope=bot")
+    message.author.send("You can invite me with this link: https://discordapp.com/api/oauth2/authorize?client_id=453861286242025484&permissions=8&scope=bot")
    }
 
   if(command === "clear") {
