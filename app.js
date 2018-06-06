@@ -12,7 +12,7 @@ const config = require("./config.json");
 // config.prefix contains the message prefix.
 
 client.on("ready", () => {
-  client.user.setActivity(`met vince en lars`);
+  client.user.setActivity(`with cheese`);
 });
 
 function clean(text) {
@@ -85,76 +85,6 @@ client.on('message', (message) => {
 
 });
 
-client.on('message', (message) => {
-
-    if(message.content.toLowerCase() == 'hey') {
-       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
-        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
-    }
-
-});
-
-client.on('message', (message) => {
-
-    if(message.content.toLowerCase() == 'hai') {
-       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
-        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
-    }
-
-});
-
-client.on('message', (message) => {
-
-    if(message.content.toLowerCase() == 'hallo') {
-       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
-        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
-    }
-
-});
-
-
-client.on('message', (message) => {
-
-    if(message.content.toLowerCase().startsWith('goed')) {
-       //message.reply('Mooi, met mij ook!');
-        message.channel.sendMessage('Mooi, met mij ook!')
-    }
-
-});
-
-client.on('message', (message) => {
-
-  if(message.content.startsWith('http')) {
-    message.delete().catch(O_o=>{}); 
-    message.channel.sendMessage('**LET OP!**\n`Ook in de ruimte gelden regels!\ndit is een waarschuwing wegens:\nlinkjes posten zonder toestemming!`')
-  }
-
-});
-
-
-client.on('guildMemberAdd', member => {
-    member.guild.channels.get('428835187456213013').send('🌎 Welkom in de ruimte, ' + member + '!🌎'); 
-    member.addRole('448395948650004480')
-    member.guild.createChannel(`config-${member}`, "text").then(c => {
-      let everyone = member.guild.roles.find("name", "@everyone");
-      c.overwritePermissions(everyone, {
-          SEND_MESSAGES: false,
-          READ_MESSAGES: false
-      });
-      c.overwritePermissions(member, {
-          SEND_MESSAGES: true,
-          READ_MESSAGES: true
-      });
-    if(message.member.startsWith("!lang nl"))
-      if (!message.channel.name.startsWith(`config-`)) return message.channel.send(` `);  
-        message.channel.delete();
-    member.removeRole("448395948650004480")
-    member.addRole('427226917738119179')
-  .then(console.log)
-  .catch(console.error);
-    });
-  });
-
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot is tomas ariëns aan het hacken, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
@@ -191,16 +121,9 @@ client.on("message", async message => {
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   
-if(command === "eenhoorn") {
-message.channel.send("https://pre00.deviantart.net/aa37/th/pre/f/2018/063/c/c/movie_style_lightning_bliss_profile_by_lightning_bliss-dc4y26x.png")
-}
 
-if(command === "HamKaasBroodjeVanDeMacDonaldsEnHetIsLekker") {
-message.channel.send("https://www.google.nl/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2F736x%2F1b%2F15%2Fab%2F1b15ab1f35abb91204541036dd977798--kaas-toast-ham-and-cheese.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fwillyvandenberg%2Frecepten-broodjes-bladerdeeg%2F&docid=5d-MYuXMjQcAdM&tbnid=X-LB3xB7DCiDbM%3A&vet=10ahUKEwiFy4CYjYjbAhURZVAKHXc-Bz8QMwg4KAQwBA..i&w=736&h=552&itg=1&bih=637&biw=1366&q=HamKaasBroodjeVanDeMacDonalds&ved=0ahUKEwiFy4CYjYjbAhURZVAKHXc-Bz8QMwg4KAQwBA&iact=mrc&uact=8")
-}
-
-if(command === "kaas") {
-message.channel.send("KAAS? WAAR? IK WIL KAAS!! :cheese:")
+if(command === "cheese") {
+message.channel.send("CHEESE?! I WANT CHEESE :cheese:")
 }
   
 if(command === "storing") {
@@ -356,7 +279,12 @@ message.channel.send({ embed: embed });
       .catch(error => message.reply(`Sorry ${message.author} kan ik niet bannen om: ${error}`));
     message.reply(`${member.user.tag} is geband door ${message.author.tag} omdat: ${reason}`);
   }
-  
+
+  if(command === "invite") {
+    message.channel.send("📪 I have send you a DM with a explenation.📪 ")
+    message.author.send("You can invite me with to this link: https://discordapp.com/api/oauth2/authorize?client_id=453861286242025484&permissions=8&scope=bot")
+   }
+
   if(command === "clear") {
     if(!message.member.roles.some(r=>["Hacker"].includes(r.name)) )
     return message.reply("je kan geen !clear vraag aan een CEO of head-support om hulp");
@@ -377,4 +305,4 @@ message.channel.send({ embed: embed });
 });
 
 
-client.login("NDM4NDAwOTc5NTQxNTU3MjQ4.Dc3Azw.B62w5HXJdEi7fSRzyCcGN1fNkvA");
+client.login("NDUzODYxMjg2MjQyMDI1NDg0.DflDIQ.4xjaOv9FGN-x8hJAUfKKXK7ejvE");
