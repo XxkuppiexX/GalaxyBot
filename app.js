@@ -104,7 +104,7 @@ client.on("guildDelete", guild => {
 
 client.on("guildMemberAdd", member => {
     console.log(`er is iemand gejoint:` + member.user.username);
-    member.addRole("name", ".");
+    member.addRole("453995866336919567");
   });
   
 client.on("message", async message => {
@@ -161,7 +161,7 @@ if(command === "profsay") {
 }
 
 if(command === "cheesgo") {
-let role = message.guild.roles.find("name", ".");
+let role = message.guild.roles.find("453995866336919567");
 if (message.channel.id = 453984941558988804) {
   member.addRole(role).catch(console.error);
   message.channel.send(":white_check_mark: thanks for your verify, ${message.author}");
