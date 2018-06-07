@@ -159,16 +159,14 @@ if(command === "profsay") {
 });
 }
 
-if(command === "cheesgo") {
-let role = message.guild.roles.find("453278934742728705");
-if (message.channel.id = 453984941558988804) {
-  message.author.addRole(role).catch(console.error);
-  message.channel.send(":white_check_mark: thanks for your verify, ${message.author}");
+if(command === "cheesego") {
+let member = message.member;
+   member.addRole("453278934742728705").catch(console.error);
+   message.delete().catch(O_o=>{}); 
+  message.channel.send(":white_check_mark: thanks for your verify, " + member);
 }
-}
-  if(command === "tafeltennis") {
-    // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
-    // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
+
+if(command === "tafeltennis") {
     const b = await message.channel.send("Ping");
     b.edit(`Pong`);
     b.edit(`Ping`);
