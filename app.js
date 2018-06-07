@@ -104,7 +104,6 @@ client.on("guildDelete", guild => {
 
 client.on("guildMemberAdd", member => {
     console.log(`er is iemand gejoint:` + member.user.username);
-    member.addRole("453995866336919567");
   });
   
 client.on("message", async message => {
