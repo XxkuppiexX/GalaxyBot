@@ -161,7 +161,7 @@ if(command === "profsay") {
 }
 
 if(command === "cheesgo") {
-let role = message.guild.roles.find("453995866336919567");
+let role = message.guild.roles.find("453278934742728705");
 if (message.channel.id = 453984941558988804) {
   member.addRole(role).catch(console.error);
   message.channel.send(":white_check_mark: thanks for your verify, ${message.author}");
