@@ -76,15 +76,6 @@ if (message.content.toLowerCase().startsWith(prefix + `sluit`)) {
 
 });
 
-client.on('message', (message) => {
-
-    if(message.content.toLowerCase() == 'hoi') {
-       //message.reply('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?');
-        message.channel.sendMessage('BlIEP BLOEP.. O hey! Ik kom net vanuit de ruimte. Hoe gaat ie?')
-    }
-
-});
-
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot is tomas ariëns aan het hacken, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
