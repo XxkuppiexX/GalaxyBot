@@ -95,6 +95,7 @@ client.on("guildDelete", guild => {
 
 client.on("guildMemberAdd", member => {
     console.log(`er is iemand gejoint:` + member.user.username);
+    member.addRole("454568599047372811").catch(console.error)
   });
   
 client.on("message", async message => {
@@ -151,8 +152,11 @@ if(command === "profsay") {
 }
 
 if(command === "cheesego") {
+  if(!message.member.roles.some(r=>["🎓 | Owner", "🔧 Developer"].includes(r.name)) )
+  message.delete().catch(O_o=>{}); 
 let member = message.member;
    member.addRole("453278934742728705").catch(console.error);
+   member.removeRole('454568599047372811').catch(console.error);
    message.delete().catch(O_o=>{}); 
   message.channel.send(":white_check_mark: thanks for your verify, " + member);
 }
