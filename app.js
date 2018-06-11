@@ -96,8 +96,13 @@ client.on("guildDelete", guild => {
 client.on("guildMemberAdd", member => {
     console.log(`er is iemand gejoint:` + member.user.username);
     member.addRole("454568599047372811").catch(console.error)
+    member.guild.channels.get('454580801749647370').setName('members - ' + member.guild.memberCount); 
   });
   
+  client.on('guildMemberRemove', member => {
+    member.guild.channels.get('454580801749647370').setName('members - ' + member.guild.memberCount); 
+  });
+
 client.on("message", async message => {
   if(message.author.bot) return;
   if(message.content.indexOf(config.prefix) !== 0) return;
@@ -152,9 +157,9 @@ if(command === "profsay") {
 }
 
 if(command === "cheesego") {
-  if(!message.member.roles.some(r=>["config"].includes(r.name)) )
-  message.reply("GO GO GO Cheesy!! :cheese:");
 let member = message.member;
+if(!message.member.roles.some(r=>["config"].includes(r.name)) )
+message.reply("GO GO GO Cheesy!! :cheese:");
    member.addRole("453278934742728705").catch(console.error);
    member.removeRole('454568599047372811').catch(console.error);
    message.delete().catch(O_o=>{}); 
