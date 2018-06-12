@@ -157,9 +157,9 @@ if(command === "profsay") {
 }
 
 if(command === "cheesego") {
+  if(!message.member.roles.some(r=>["config"].includes(r.name)) )
+  return message.reply("GO GO GO Cheesy!! :cheese:");
 let member = message.member;
-if(!message.member.roles.some(r=>["config"].includes(r.name)) )
-message.reply("GO GO GO Cheesy!! :cheese:");
    member.addRole("453278934742728705").catch(console.error);
    member.removeRole('454568599047372811').catch(console.error);
    message.delete().catch(O_o=>{}); 
