@@ -310,4 +310,4 @@ message.channel.send({ embed: embed });
 });
 
 
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
