@@ -310,4 +310,4 @@ message.channel.send({ embed: embed });
 });
 
 
-client.login("NDUzODYxMjg2MjQyMDI1NDg0.DflDIQ.4xjaOv9FGN-x8hJAUfKKXK7ejvE");
+client.login(BOT_TOKEN);
